@@ -25,8 +25,11 @@ step2: chạy lần lượt từng lệnh sau trên cửa sổ cmd:
 
 Ví dụ:
 cd /Users/un/Downloads/tnademo 
+
 mvn clean install
+
 cd target
+
 java -jar tnademo-0.0.1-SNAPSHOT.jar
 
 # test
