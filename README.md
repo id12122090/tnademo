@@ -1,5 +1,5 @@
 Bạn có thể chạy theo 1 cách được hướng dẫn như sau đây 
-(trong trường hợp không thể chạy thì hãy đưa nó cho 1 người có kinh nghiệm 1 chút về SPRING-BOOT và MAVEN, họ sẽ giúp bạn)
+(trong trường hợp không thể chạy thì hãy đưa nó cho 1 người có kinh nghiệm 1 chút về SPRING-BOOT và MAVEN, họ sẽ giúp bạn :)
 
 # DB
 step1: Cài đặt/Sử dụng hệ quản trị cơ sở dữ liệu mysql
