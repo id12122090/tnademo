@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+  	<div class="container mt-3">
+	  <h2>Toggleable Tabs</h2>
+	  <br>
+	  <!-- Nav tabs -->
+	  <ul class="nav nav-tabs">
+	    <li class="nav-item">
+	      <a class="nav-link active" data-toggle="tab" href="#home">Home</a>
+	    </li>
+	    <li class="nav-item">
+	      <a class="nav-link" data-toggle="tab" href="#menu1">API Response</a>
+	    </li>
+	  </ul>
+	
+	  <!-- Tab panes -->
+	  <div class="tab-content">
+	    <div id="home" class="container tab-pane active"><br>
+	      <h3>HOME</h3>
+	      
+	      	<div id="accordion">
+  	
+  <div class="card" jput="users">
+    <div class="card-header" id="h{{json.id}}">
+      <h5 class="mb-0">
+        <button class="btn btn-link" data-toggle="collapse" data-target="#{{json.id}}" aria-expanded="true" aria-controls="{{json.id}}">
+          <span>ID: {{json.id}}</span>
+          <span>NAME: {{json.name}}</span>
+          <span>GOAL: {{json.goal}}</span>
+          <span>TOTAL BUDGET: {{json.total_budget}}</span>
+          <span>STATUS: {{json.status}}</span>
+          <span>PLATFORMS: {{Object.keys(json.platforms)}}</span>
+        </button>
+      </h5>
+    </div>
+
+    <div id="{{json.id}}" class="collapse" aria-labelledby="h{{json.id}}" data-parent="#accordion">
+      <div class="card-body">
+      	<ul jrepeat="platforms">
+			<div jPut="platforms">
+	 			<hr>
+	 			      {{Object.keys(json.platforms)[2]}}
+	 			
+ 				<li>{{json.status}}</li>
+				<li>{{json.total_budget}}</li>
+				<li>{{json.remaining_budget}}</li>
+				<li>{{json.start_date}}</li>
+				<li>{{json.end_date}}</li>
+				<li>target_audiance
+					<ul>
+					<li>LANGUAGES: {{json.target_audiance.languages}}</li>
+					<li>GENRES: {{json.target_audiance.genders}}</li>
+					<li>AGE RANGE: {{json.target_audiance.age_range}}</li>
+					<li>LOCATIONS: {{json.target_audiance.locations}}</li>
+					<li>KEYWORDS: {{json.target_audiance.KeyWords===undefined?'':json.target_audiance.KeyWords}}</li>
+					<li>INTERESTS: {{json.target_audiance.interests===undefined?'':json.target_audiance.interests}}</li>
+					</ul>			
+				</li>
+				<li>creatives
+					<ul>
+					<li>header: {{json.creatives.header===undefined?'':json.creatives.header}}</li>
+					<li>header_1: {{json.creatives.header_1===undefined?'':json.creatives.header_1}}</li>
+					<li>header_2: {{json.creatives.header_2===undefined?'':json.creatives.header_2}}</li>
+					<li>description: {{json.creatives.description}}</li>
+					<li>url: {{json.creatives.url}}</li>
+					<li>image: {{json.creatives.image}}</li>
+					</ul>			
+				</li>
+				<li>insights
+					<ul>
+					<li>impressions: {{json.insights.impressions}}</li>
+					<li>clicks: {{json.insights.clicks}}</li>
+					<li>nanos_score: {{json.insights.nanos_score}}</li>
+					<li>cost_per_click: {{json.insights.cost_per_click}}</li>
+					<li>click_through_rate: {{json.insights.click_through_rate}}</li>
+					<li>advanced_kpi_1: {{json.insights.advanced_kpi_1}}</li>
+					<li>advanced_kpi_2: {{json.insights.advanced_kpi_2}}</li>
+					</ul>			
+				</li>
+		</div>
+		</div>
+		</ul>
+      </div>
+    </div>
+  </div>
+	    </div>
+	    <div id="menu1" class="container tab-pane fade"><br>
+	      <h3>API Response</h3>
+	       	<p id="feedback"></p>
+	      
+	    </div>
+	  </div>
+	</div>
+  
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  	<script type="text/javascript" src="js/jput-2.js"></script>  
+  	<script type="text/javascript" src="js/util.js"></script>
+  	
+  </body>
+</html>
