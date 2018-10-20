@@ -3,6 +3,7 @@ Bạn có thể chạy theo 1 cách được hướng dẫn như sau đây
 
 # DB
 step1: Cài đặt/Sử dụng hệ quản trị cơ sở dữ liệu mysql
+
 step2: Tạo cơ sở dữ liệu có tên: db_example, username/password lần lượt là root/mysql, hoặc tạo tuỳ ý và điều chỉnh thông số trong file application.property cho khớp 3 thông tin này để chạy.
 
 spring.datasource.url=jdbc:mysql://localhost:3306/db_example
